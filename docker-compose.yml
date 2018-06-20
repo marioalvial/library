@@ -1,0 +1,28 @@
+version: '3'
+
+services:
+
+  api:
+    build:
+      context: .
+    volumes:
+      - .:/library
+    command: mix phoenix.server
+    environment:
+      MIX_ENV: dev
+      PORT: 4000
+
+    ports:
+      - "4000:4000"
+    depends_on:
+      - postgres
+
+  postgres:
+    image: postgres
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: librarydb
+
