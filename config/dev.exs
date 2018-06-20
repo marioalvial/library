@@ -42,5 +42,6 @@ config :library, Library.Repo,
   username: System.get_env("POSTGRES_USER"),
   password: System.get_env("POSTGRES_PASSWORD"),
   database: System.get_env("POSTGRES_DB"),
-  hostname: "postgres",
+  hostname: System.get_env("POSTGRES_HOSTNAME"),
+  port: 5432,
   pool_size: 10

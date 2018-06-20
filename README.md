@@ -1,19 +1,33 @@
 # Library
 
-To start your Phoenix server:
+Application for rent books 
 
-  * Install dependencies with `mix deps.get`
-  * Create and migrate your database with `mix ecto.create && mix ecto.migrate`
-  * Start Phoenix endpoint with `mix phx.server`
+## Requirements
 
-Now you can visit [`localhost:4000`](http://localhost:4000) from your browser.
+For building and running the application you need:
 
-Ready to run in production? Please [check our deployment guides](http://www.phoenixframework.org/docs/deployment).
+- [Docker](https://www.docker.com/)
 
-## Learn more
+## Documentation
+[Postman](https://documenter.getpostman.com/view/4456023/RWEgreCA)
 
-  * Official website: http://www.phoenixframework.org/
-  * Guides: http://phoenixframework.org/docs/overview
-  * Docs: https://hexdocs.pm/phoenix
-  * Mailing list: http://groups.google.com/group/phoenix-talk
-  * Source: https://github.com/phoenixframework/phoenix
+## Running
+
+First, clone the project:
+
+```shell
+git clone git@github.com:marioalvial/library.git
+cd library
+```
+Running with docker:
+
+```shell
+docker-compose up --build
+```
+
+## Built With
+
+- [Elixir](https://elixir-lang.org/) - Programming language
+- [IntelliJ](https://www.jetbrains.com/idea/) - IDE
+- [Phoenix](http://phoenixframework.org/) - Web Framework
+- [Docker](https://www.docker.com/) - Containerization Platform

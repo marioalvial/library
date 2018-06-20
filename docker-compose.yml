@@ -6,10 +6,13 @@ services:
     build:
       context: .
     volumes:
-      - .:/library
-    command: mix phoenix.server
+      - .:/app
     environment:
       MIX_ENV: dev
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: librarydb
+      POSTGRES_HOSTNAME: postgres
       PORT: 4000
 
     ports:
@@ -18,7 +21,7 @@ services:
       - postgres
 
   postgres:
-    image: postgres
+    image: postgres:latest
     ports:
       - "5432:5432"
     environment:
